@@ -1,0 +1,17 @@
+html
+    head
+        link(rel="stylesheet", href="css/main.css")
+    body
+        canvas(id="orbitCanvas")
+    script.
+
+        orbitCanvas.height = orbitCanvas.offsetHeight;
+        orbitCanvas.width = orbitCanvas.offsetWidth;
+
+        var c = document.getElementById("orbitCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.strokeStyle = "white";
+        ctx.stroke();
+
